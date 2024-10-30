@@ -91,13 +91,13 @@ h1 {
 p {
   padding: 0;
   margin: 0;
+  font-size: 20px;
   line-height: 28px;
 }
 
 .min_p {
   font-size: 18px;
   line-height: 22.97px;
-  width: 580px;
 }
 
 .row_left {
@@ -105,6 +105,10 @@ p {
   flex-direction: row;
   gap: 40px;
   align-items: center;
+}
+
+.row_left p {
+  width: 580px;
 }
 
 h2 {
@@ -125,6 +129,11 @@ h3 {
   border-radius: 7px;
 }
 
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
 .card_wrapper {
   display: flex;
   flex-direction: column;
@@ -139,10 +148,7 @@ h3 {
 
 .card {
   width: 100%;
-  border: 1px solid rgba(25, 26, 35, 1);
-  border-bottom: 6px solid rgba(25, 26, 35, 1);
   padding: 50px;
-  border-radius: 45px;
 }
 
 .card a {
@@ -168,8 +174,7 @@ h3 {
 }
 
 .crd_2 h3,
-.crd_3 h3,
-.crd_3 p {
+.crd_3 h3 {
   background: rgba(255, 255, 255, 1);
 }
 
@@ -182,13 +187,137 @@ h3 {
   background: rgba(255, 255, 255, 1);
 }
 
+.crd_3 p {
+  color: rgba(255, 255, 255, 1);
+}
+
 .info {
   background: rgba(243, 243, 243, 1);
   padding: 60px;
-  border-radius: 45px;
 }
 
 .img_wrapper {
   height: 257px;
   object-fit: cover;
+}
+
+.info_2 {
+  padding: 70px 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  background: rgba(25, 26, 35, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.info_2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info_2 p {
+  font-size: 18px;
+  line-height: 22.97px;
+}
+
+.info_2 a {
+  display: flex;
+  gap: 15px;
+  color: rgba(185, 255, 102, 1);
+}
+
+.info_2 a p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.vertical_line {
+  height: 100%;
+  width: 1px;
+}
+
+.horizontal_line {
+  height: 1px;
+  width: 100%;
+}
+
+.bg_gray {
+  background: rgba(243, 243, 243, 1);
+}
+
+.bg_white {
+  background: rgba(255, 255, 255, 1);
+}
+
+.bg_green {
+  background: rgba(185, 255, 102, 1);
+}
+
+.bg_black {
+  background: rgba(25, 26, 35, 1);
+}
+
+.brd_shadow {
+  border: 1px solid rgba(25, 26, 35, 1);
+  border-bottom: 6px solid rgba(25, 26, 35, 1);
+}
+
+.brd_r45 {
+  border-radius: 45px;
+}
+
+.team_card {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  padding: 40px 35px;
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.person .icon {
+  background: rgba(25, 26, 35, 1);
+  color: rgba(185, 255, 102, 1);
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 4px 8px;
+}
+
+.person div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.person .content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.row_right {
+  display: flex;
+  justify-content: end;
+}
+
+.card_wrapper .btn_2 {
+  width: 270px;
+}
+
+.col_25 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.col_5 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
