@@ -44,7 +44,6 @@ header {
 }
 
 .btn {
-  border-radius: 14px;
   padding: 20px 35px;
 }
 
@@ -68,33 +67,33 @@ header {
   color: rgba(185, 255, 102, 1);
 }
 
+.width_40p {
+  width: 40%;
+}
+
 h1 {
   font-size: 60px;
   padding: 0;
   margin: 0;
 }
 
-.col_wrapper {
+.gap_35 {
+  gap: 35px;
+}
+
+.col_start {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 35px;
-  width: 40%;
 }
 
-.col_wrapper_2 {
+.col_sb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.col_wrapper_2 div {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.row_wrapper {
+.row_sb {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -112,11 +111,18 @@ p {
   line-height: 22.97px;
 }
 
+.gap_40 {
+  gap: 40px;
+}
+
 .row_left {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 40px;
+}
+
+.brd_r7 {
+  border-radius: 7px;
 }
 
 h2 {
@@ -124,8 +130,6 @@ h2 {
   margin: 0;
   font-size: 40px;
   font-weight: 500;
-  background: rgba(185, 255, 102, 1);
-  border-radius: 7px;
 }
 
 h3 {
@@ -134,24 +138,11 @@ h3 {
   font-size: 30px;
   font-weight: 500;
   line-height: 38.28px;
-  border-radius: 7px;
 }
 
 h4 {
   padding: 0;
   margin: 0;
-}
-
-.card_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.card_row {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
 }
 
 .card {
@@ -167,40 +158,10 @@ h4 {
 .card span {
   padding: 4px 3px 3px 4px;
   vertical-align: bottom;
-  background: rgba(25, 26, 35, 1);
-  color: rgba(185, 255, 102, 1);
   border-radius: 100%;
 }
 
-.crd_1 {
-  background: rgba(243, 243, 243, 1);
-}
-
-.crd_1 h3,
-.crd_2 {
-  background: rgba(185, 255, 102, 1);
-}
-
-.crd_2 h3,
-.crd_3 h3 {
-  background: rgba(255, 255, 255, 1);
-}
-
-.crd_3 {
-  background: rgba(25, 26, 35, 1);
-}
-
-.crd_3 span {
-  color: rgba(25, 26, 35, 1);
-  background: rgba(255, 255, 255, 1);
-}
-
-.crd_3 p {
-  color: rgba(255, 255, 255, 1);
-}
-
 .info {
-  background: rgba(243, 243, 243, 1);
   padding: 60px;
 }
 
@@ -214,25 +175,14 @@ h4 {
   display: flex;
   flex-direction: row;
   gap: 64px;
-  background: rgba(25, 26, 35, 1);
-  color: rgba(255, 255, 255, 1);
-}
-
-.info_2 div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .info_2 p {
   font-size: 18px;
   line-height: 22.97px;
 }
-
-.info_2 a {
-  display: flex;
+.gap_15 {
   gap: 15px;
-  color: rgba(185, 255, 102, 1);
 }
 
 .info_2 a p {
@@ -283,16 +233,15 @@ h4 {
   padding: 40px 35px;
 }
 
-.row_20 {
-  display: flex;
-  flex-direction: row;
+.gap_20 {
   gap: 20px;
 }
+
 .person .icon {
   background: rgba(25, 26, 35, 1);
   color: rgba(185, 255, 102, 1);
   font-weight: 700;
-  border-radius: 50%;
+  border-radius: 100%;
   padding: 4px 8px;
 }
 
@@ -301,12 +250,6 @@ h4 {
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
-}
-
-.person .content {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
 }
 
 .row_right {
@@ -318,15 +261,11 @@ h4 {
   width: 270px;
 }
 
-.col_25 {
-  display: flex;
-  flex-direction: column;
+.gap_25 {
   gap: 25px;
 }
 
-.col_5 {
-  display: flex;
-  flex-direction: column;
+.gap_5 {
   gap: 5px;
 }
 
@@ -336,7 +275,6 @@ footer {
   gap: 50px;
   padding: 55px 60px 50px 60px;
   border-radius: 45px 45px 0px 0px;
-  color: rgba(255, 255, 255, 1);
   font-size: 18px;
   line-height: 22.97px;
 }
@@ -345,36 +283,20 @@ footer a {
   text-decoration: underline;
 }
 
-footer .row_20 img {
+footer .row_left img {
   height: 30px;
   width: 30px;
-}
-
-.col_66 {
-  display: flex;
-  flex-direction: column;
-  gap: 66px;
-}
-
-.col_27 {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-  align-items: start;
 }
 
 footer h4 {
   padding: 0 7px;
   margin: 0;
-  background: rgba(185, 255, 102, 1);
-  border-radius: 7px;
-  color: rgba(25, 26, 35, 1);
   font-size: 20px;
   font-weight: 500;
   line-height: 25.52px;
 }
 
-.g_154 {
+.gap_154 {
   gap: 154px;
 }
 
@@ -383,14 +305,15 @@ footer h4 {
 }
 
 footer form {
-  padding: 58px 40px 58px 40px;
+  padding: 58px 40px;
+}
+
+.brd_r14 {
   border-radius: 14px;
 }
 
 input {
-  width: 285px;
   padding: 18px 30px;
-  border-radius: 14px;
   outline: none;
   font-size: 20px;
   line-height: 28px;
