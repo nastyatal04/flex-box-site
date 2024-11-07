@@ -28,12 +28,12 @@ a {
 }
 
 button {
-  padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+  padding: 20px 35px;
 }
 
 header {
@@ -41,10 +41,6 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.btn {
-  padding: 20px 35px;
 }
 
 .border {
@@ -67,8 +63,16 @@ header {
   color: rgba(185, 255, 102, 1);
 }
 
-.width_40p {
-  width: 40%;
+.width_45p {
+  width: 45%;
+}
+
+.width_100p {
+  width: 100%;
+}
+
+.width_500 {
+  width: 500px;
 }
 
 h1 {
@@ -77,8 +81,9 @@ h1 {
   margin: 0;
 }
 
-.gap_35 {
-  gap: 35px;
+.col {
+  display: flex;
+  flex-direction: column;
 }
 
 .col_start {
@@ -87,16 +92,42 @@ h1 {
   align-items: start;
 }
 
+.col_end {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+}
+
 .col_sb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.col_sb_start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
 .row_sb {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.row_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 p {
@@ -109,16 +140,6 @@ p {
 .min_p {
   font-size: 18px;
   line-height: 22.97px;
-}
-
-.gap_40 {
-  gap: 40px;
-}
-
-.row_left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .brd_r7 {
@@ -143,6 +164,7 @@ h3 {
 h4 {
   padding: 0;
   margin: 0;
+  font-weight: normal;
 }
 
 .card {
@@ -150,6 +172,7 @@ h4 {
   padding: 50px;
 }
 
+/* тут заменить на row_left gap_15*/
 .card a {
   display: flex;
   gap: 15px;
@@ -165,11 +188,6 @@ h4 {
   padding: 60px;
 }
 
-.img_wrapper {
-  height: 257px;
-  object-fit: cover;
-}
-
 .info_2 {
   padding: 70px 60px;
   display: flex;
@@ -181,13 +199,15 @@ h4 {
   font-size: 18px;
   line-height: 22.97px;
 }
-.gap_15 {
-  gap: 15px;
-}
 
 .info_2 a p {
   font-size: 20px;
   line-height: 28px;
+}
+
+.info_3 {
+  padding: 60px 0 80px 100px;
+  overflow: hidden;
 }
 
 .vertical_line {
@@ -225,6 +245,10 @@ h4 {
   border-radius: 45px;
 }
 
+.brd_r100p {
+  border-radius: 100%;
+}
+
 .team_card {
   display: flex;
   flex-direction: column;
@@ -233,32 +257,29 @@ h4 {
   padding: 40px 35px;
 }
 
+.proc_card {
+  padding: 41px 60px;
+}
+
+.proc_card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
 .gap_20 {
   gap: 20px;
-}
-
-.person .icon {
-  background: rgba(25, 26, 35, 1);
-  color: rgba(185, 255, 102, 1);
-  font-weight: 700;
-  border-radius: 100%;
-  padding: 4px 8px;
-}
-
-.person div {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: space-between;
-}
-
-.row_right {
-  display: flex;
-  justify-content: end;
-}
-
-.card_wrapper .btn_2 {
-  width: 270px;
 }
 
 .gap_25 {
@@ -267,6 +288,37 @@ h4 {
 
 .gap_5 {
   gap: 5px;
+}
+
+.gap_15 {
+  gap: 15px;
+}
+
+.gap_40 {
+  gap: 40px;
+}
+
+.gap_154 {
+  gap: 154px;
+}
+
+.gap_35 {
+  gap: 35px;
+}
+
+.gap_30 {
+  gap: 30px;
+}
+
+.col_sb {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.width_270 {
+  width: 270px;
 }
 
 footer {
@@ -296,10 +348,6 @@ footer h4 {
   line-height: 25.52px;
 }
 
-.gap_154 {
-  gap: 154px;
-}
-
 .bg_dark_gray {
   background: rgba(41, 42, 50, 1);
 }
@@ -312,7 +360,8 @@ footer form {
   border-radius: 14px;
 }
 
-input {
+input,
+textarea {
   padding: 18px 30px;
   outline: none;
   font-size: 20px;
@@ -320,16 +369,51 @@ input {
   font-size: 18px;
   line-height: 22.97px;
 }
-input:active {
+input:active,
+textarea:active {
   outline: none;
 }
 :focus {
   outline: none;
 }
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: rgba(137, 137, 137, 1);
   font-size: 18px;
   line-height: 22.97px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 45px;
+  margin-right: 0;
+  user-select: none;
+  vertical-align: bottom;
+}
+
+.radio::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 1%;
+  background-image: url("img/RadiobuttonN.svg");
+}
+
+input[type="radio"]:checked + .radio::before {
+  background-image: url("img/RadiobuttonY.svg");
+}
+
+textarea {
+  resize: none;
 }
 
 footer input {
@@ -350,4 +434,37 @@ label {
 
 .width_556 {
   width: 556px;
+}
+
+.relative {
+  position: relative;
+}
+
+.img_over {
+  position: absolute;
+  top: -20px;
+  right: 100px;
+}
+
+.slider {
+  padding: 60px;
+  overflow: hidden;
+}
+
+.comment {
+  width: 606px;
+  height: 266px;
+  background-image: url("img/Bubble.svg");
+  font-weight: normal;
+}
+
+.comment .min_p {
+  padding: 48px 52px 0 52px;
+}
+
+.card_slider .col {
+  padding: 0 0 0 80px;
+}
+.gap_124 {
+  gap: 124px;
 }
